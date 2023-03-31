@@ -1,0 +1,57 @@
+{
+  "name": "nano-aes",
+  "version": "0.0.1",
+  "description": "A simple AES (Advanced Encryption Standard) module. Wrapper for Node.js crypto module",
+  "keywords": [
+    "nano-aes",
+    "aes",
+    "nano aes",
+    "encryption",
+    "encrypt",
+    "decrypt",
+    "nodejs"
+  ],
+  "homepage": "https://github.com/Hazmi35/nano-aes#readme",
+  "bugs": {
+    "url": "https://github.com/Hazmi35/nano-aes/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hazmi35/nano-aes.git"
+  },
+  "license": "MIT",
+  "author": "Hazmi35 <contact@hzmi.xyz>",
+  "exports": {
+    "import": "./dist/index.mjs",
+    "require": "./dist/index.js",
+    "types": "./dist/index.d.ts"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "typings": "./dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "build": "pnpm run lint && pnpm run compile",
+    "compile": "tsup",
+    "lint": "eslint . --ignore-path .gitignore --ext .ts",
+    "lint:fix": "pnpm run lint -- --fix"
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "project": "./tsconfig.eslint.json"
+    },
+    "extends": "@hazmi35/eslint-config/typescript/node",
+    "ignorePatterns": "dist/*"
+  },
+  "devDependencies": {
+    "@hazmi35/eslint-config": "^9.0.0",
+    "@swc/core": "^1.3.44",
+    "@types/node": "^18.15.11",
+    "@typescript-eslint/eslint-plugin": "^5.57.0",
+    "@typescript-eslint/parser": "^5.57.0",
+    "eslint": "^8.37.0",
+    "terser": "^5.16.8",
+    "tsup": "^6.7.0",
+    "typescript": "^5.0.3"
+  }
+}

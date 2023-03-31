@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "target": "ES2022",
+        "module": "Node16",
+        "moduleResolution": "node16",
+        "lib": ["ES2022"],
+        "strict": true,
+        "outDir": "dist",
+        "allowSyntheticDefaultImports": true,
+        "skipLibCheck": true,
+        "noEmitHelpers": true,
+        "importHelpers": true,
+        "resolveJsonModule": false, // Node.js ESM doesn't support JSON (yet)
+        "typeRoots": ["node_modules/@types", "src/typings"]
+    },
+    "exclude": [],
+    "include": ["src/**/*"]
+}
