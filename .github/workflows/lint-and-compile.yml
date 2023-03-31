@@ -1,0 +1,14 @@
+name: Lint code
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - "**"
+
+jobs:
+  lint:
+    uses: Hazmi35/workflows/.github/workflows/pnpm-eslint-tsc-compile.yml@master
+    secrets: inherit
