@@ -18,5 +18,5 @@ NanoAES.generateKey(192);
 const encrypted = AESCipher.encrypt("Hello World!").toString("hex");
 const decrypted = AESCipher.decrypt(encrypted).toString("utf8");
 
-console.log(decrypted); // Hello World!
+console.log(Buffer.from(decrypted, "hex")); // Hello World!
 ```
