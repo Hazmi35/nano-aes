@@ -32,6 +32,8 @@ export class NanoAES {
     }
 
     public encrypt(data: Buffer | string): Buffer {
+        if (!Buffer.isBuffer(data) && typeof data !== "string") throw new Error("Input must be a Buffer or string");
+
         const IV = randomBytes(16);
         const cipher = createCipheriv(this.algorithm, Buffer.from(this.key), IV);
 
@@ -43,6 +45,8 @@ export class NanoAES {
     }
 
     public decrypt(encryptedData: Buffer): Buffer {
+        if (Buffer.isBuffer(encryptedData)) throw new Error("Input must be a Buffer");
+
         const [cipherText, IV, authTag] = split(encryptedData, ";;");
         const decipher = createDecipheriv(this.algorithm, Buffer.from(this.key), IV);
 
