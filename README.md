@@ -34,4 +34,4 @@ _*1_ The officially supported Node.js version is from v14, but you can still use
 
 Node.js v12 are **EOL** and doesn't receive OpenSSL updates, which what `node:crypto` module used, which means no security updates.
 
-See what OpenSSL version you Node.js is linked to with `process.versions.openssl`
+See what OpenSSL version your Node.js is linked to with `process.versions.openssl`
