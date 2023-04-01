@@ -16,7 +16,7 @@ const AESCipher = new NanoAES("abcdefghijklmnopqrstuvwx", { keySize: 192, mode: 
 NanoAES.generateKey(192);
 
 const encrypted = AESCipher.encrypt("Hello World!").toString("hex");
-const decrypted = AESCipher.decrypt(encrypted).toString("utf8");
+const decrypted = AESCipher.decrypt(Buffer.from(encrypted, "hex")).toString("utf8");
 
-console.log(Buffer.from(decrypted, "hex")); // Hello World!
+console.log(decrypted); // Hello World!
 ```
