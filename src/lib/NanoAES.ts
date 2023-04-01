@@ -28,7 +28,7 @@ export class NanoAES {
 
         if (!modes.includes(this.opt.mode)) throw new Error(`Supported Modes are only ${modes.join(", ")}`);
 
-        if (Buffer.from(key).length !== Number(this.opt.keySize) * 8) throw new Error(`Invalid key size for ${this.algorithm}!`);
+        if (Buffer.from(key).length !== Number(this.opt.keySize) / 8) throw new Error(`Invalid key size for ${this.algorithm}!`);
     }
 
     public encrypt(data: Buffer | string): Buffer {
