@@ -20,7 +20,7 @@ import { NanoAES } from "nano-aes";
 // Key size is 192 bits / 24 byte
 const AESCipher = new NanoAES("abcdefghijklmnopqrstuvwx", { keySize: 192, mode: "ctr" });
 // Or you can a random key generate from the static method
-const AESCipher = new NanoAES(NanoAES.generateKey(192);, { keySize: 192, mode: "ctr" });
+const AESCipher = new NanoAES(NanoAES.generateKey(192), { keySize: 192, mode: "ctr" });
 
 const encrypted = AESCipher.encrypt("Hello World!").toString("hex");
 const decrypted = AESCipher.decrypt(Buffer.from(encrypted, "hex")).toString("utf8");
