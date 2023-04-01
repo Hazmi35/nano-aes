@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unnecessary-condition */
-import { CipherCCM, CipherGCM, createCipheriv, createDecipheriv, DecipherCCM, DecipherGCM, randomBytes } from "crypto";
+import { CipherCCM, CipherGCM, createCipheriv, createDecipheriv, DecipherCCM, DecipherGCM, randomBytes } from "node:crypto";
 import { combine, split } from "../util/BufferUtil.js";
 
 const modes = ["cbc", "ctr", "gcm"];
