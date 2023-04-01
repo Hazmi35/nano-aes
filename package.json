@@ -29,7 +29,9 @@
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "typings": "./dist/index.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "pnpm run lint && pnpm run compile",
     "compile": "tsup",
@@ -53,5 +55,8 @@
     "terser": "^5.16.8",
     "tsup": "^6.7.0",
     "typescript": "^5.0.3"
+  },
+  "dependencies": {
+    "tslib": "^2.5.0"
   }
 }
