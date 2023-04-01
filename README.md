@@ -6,7 +6,7 @@ Features:
 - Supports CBC, CTR, and GCM mode.
 - Supports 128, 192, and 256 key sizes/length.
 - Uses a secure randomized IV from a cryptographically strong pseudorandom data
-- Lightweight with no dependencies (With only 9.6kb of unpacked size!)
+- Lightweight with no dependencies (With only ~9.9kB of unpacked size!)
 - Easy to use
 - Supported both from ESM and CommonJS (We bundle for both)
 - Backwards compatible down to Node.js v14 and even v12! _*1_
