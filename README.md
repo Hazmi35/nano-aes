@@ -1,8 +1,13 @@
 # nano-aes
 
-Simple and lightweight AES (Advanced Encryption Standard) module. A Wrapper for Node.js crypto module.
+Simple & lightweight AES (Advanced Encryption Standard) module. Wrapper for Node.js crypto module.
 
-Currently supports: CBC, CTR and GCM mode with 128, 192, 256 key sizes
+Features:
+- Supports CBC, CTR, and GCM mode.
+- Supports 128, 192, and 256 key sizes/length.
+- Uses a secure randomized IV from a cryptographically strong pseudorandom data
+- Lightweight with no dependencies
+- Easy to use
 
 ## Example
 ```js
@@ -18,5 +23,6 @@ NanoAES.generateKey(192);
 const encrypted = AESCipher.encrypt("Hello World!").toString("hex");
 const decrypted = AESCipher.decrypt(Buffer.from(encrypted, "hex")).toString("utf8");
 
+console.log(encrypted); // [Some Encrypted Data]
 console.log(decrypted); // Hello World!
 ```
