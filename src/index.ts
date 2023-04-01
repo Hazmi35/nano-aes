@@ -1,1 +1,1 @@
-export const x = (): string => "Hello, World!";
+export * from "./lib/NanoAES.js";
