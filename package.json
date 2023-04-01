@@ -38,7 +38,7 @@
     "compile": "tsup",
     "lint": "eslint . --ignore-path .gitignore --ext .ts",
     "lint:fix": "pnpm run lint -- --fix",
-    "release": "pnpm publish --access public"
+    "release": "pnpm publish --access public --no-git-checks"
   },
   "eslintConfig": {
     "parserOptions": {
