@@ -5,7 +5,7 @@ import { combine, split } from "../util/BufferUtil.js";
 const modes = ["cbc", "ctr", "gcm"];
 export interface INanoAESCipherOpt {
     mode: "cbc" | "ctr" | "gcm";
-    keySize: "128" | "192" | "256";
+    keySize: 128 | 192 | 256;
 }
 export type AuthenticatedCipher = CipherCCM | CipherCCM;
 export type AuthenticatedDecipher = DecipherCCM | DecipherGCM;
