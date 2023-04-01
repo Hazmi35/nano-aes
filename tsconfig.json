@@ -8,8 +8,8 @@
         "outDir": "dist",
         "allowSyntheticDefaultImports": true,
         "skipLibCheck": true,
-        "noEmitHelpers": true,
-        "importHelpers": true,
+        "noEmitHelpers": false, // Makes a tslib a not requirement
+        "importHelpers": false,
         "resolveJsonModule": false, // Node.js ESM doesn't support JSON (yet)
         "typeRoots": ["node_modules/@types", "src/typings"]
     },
