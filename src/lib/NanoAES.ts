@@ -57,4 +57,8 @@ export class NanoAES {
     private isAuthenticated(): boolean {
         return this.opt.mode === "gcm";
     }
+
+    public static generateKey(size: 128 | 192 | 256): Buffer {
+        return randomBytes(Number(size) / 8);
+    }
 }
