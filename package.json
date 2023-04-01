@@ -1,6 +1,6 @@
 {
   "name": "nano-aes",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A simple AES (Advanced Encryption Standard) module. Wrapper for Node.js crypto module",
   "keywords": [
     "nano-aes",
