@@ -53,7 +53,7 @@
     "@types/node": "^18.16.18",
     "@typescript-eslint/eslint-plugin": "^5.59.11",
     "@typescript-eslint/parser": "^5.59.11",
-    "eslint": "^8.42.0",
+    "eslint": "^8.43.0",
     "terser": "^5.18.0",
     "tsup": "^6.7.0",
     "typescript": "^5.1.3"
