@@ -12,8 +12,8 @@ devDependencies:
     specifier: ^1.3.86
     version: 1.3.86
   '@types/node':
-    specifier: ^18.17.17
-    version: 18.17.17
+    specifier: ^18.17.18
+    version: 18.17.18
   '@typescript-eslint/eslint-plugin':
     specifier: ^5.62.0
     version: 5.62.0(@typescript-eslint/parser@5.62.0)(eslint@8.49.0)(typescript@5.2.2)
@@ -24,8 +24,8 @@ devDependencies:
     specifier: ^8.49.0
     version: 8.49.0
   terser:
-    specifier: ^5.19.4
-    version: 5.19.4
+    specifier: ^5.20.0
+    version: 5.20.0
   tsup:
     specifier: ^6.7.0
     version: 6.7.0(@swc/core@1.3.86)(typescript@5.2.2)
@@ -503,8 +503,8 @@ packages:
     resolution: {integrity: sha512-wOuvG1SN4Us4rez+tylwwwCV1psiNVOkJeM3AUWUNWg/jDQY2+HE/444y5gc+jBmRqASOm2Oeh5c1axHobwRKQ==}
     dev: true
 
-  /@types/node@18.17.17:
-    resolution: {integrity: sha512-cOxcXsQ2sxiwkykdJqvyFS+MLQPLvIdwh5l6gNg8qF6s+C7XSkEWOZjK+XhUZd+mYvHV/180g2cnCcIl4l06Pw==}
+  /@types/node@18.17.18:
+    resolution: {integrity: sha512-/4QOuy3ZpV7Ya1GTRz5CYSz3DgkKpyUptXuQ5PPce7uuyJAOR7r9FhkmxJfvcNUXyklbC63a+YvB3jxy7s9ngw==}
     dev: true
 
   /@types/semver@7.3.13:
@@ -1564,8 +1564,8 @@ packages:
       has-flag: 4.0.0
     dev: true
 
-  /terser@5.19.4:
-    resolution: {integrity: sha512-6p1DjHeuluwxDXcuT9VR8p64klWJKo1ILiy19s6C9+0Bh2+NWTX6nD9EPppiER4ICkHDVB1RkVpin/YW2nQn/g==}
+  /terser@5.20.0:
+    resolution: {integrity: sha512-e56ETryaQDyebBwJIWYB2TT6f2EZ0fL0sW/JRXNMN26zZdKi2u/E/5my5lG6jNxym6qsrVXfFRmOdV42zlAgLQ==}
     engines: {node: '>=10'}
     hasBin: true
     dependencies:
