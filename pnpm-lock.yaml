@@ -7,13 +7,13 @@ settings:
 devDependencies:
   '@hazmi35/eslint-config':
     specifier: ^9.0.0
-    version: 9.0.0(@eslint/js@8.50.0)(@typescript-eslint/eslint-plugin@5.62.0)(@typescript-eslint/parser@5.62.0)(eslint@8.51.0)(typescript@5.2.2)
+    version: 9.0.0(@eslint/js@8.51.0)(@typescript-eslint/eslint-plugin@5.62.0)(@typescript-eslint/parser@5.62.0)(eslint@8.51.0)(typescript@5.2.2)
   '@swc/core':
     specifier: ^1.3.92
     version: 1.3.92
   '@types/node':
-    specifier: ^18.18.3
-    version: 18.18.3
+    specifier: ^18.18.4
+    version: 18.18.4
   '@typescript-eslint/eslint-plugin':
     specifier: ^5.62.0
     version: 5.62.0(@typescript-eslint/parser@5.62.0)(eslint@8.51.0)(typescript@5.2.2)
@@ -275,17 +275,12 @@ packages:
       - supports-color
     dev: true
 
-  /@eslint/js@8.50.0:
-    resolution: {integrity: sha512-NCC3zz2+nvYd+Ckfh87rA47zfu2QsQpvc6k1yzTk+b9KzRj0wkGa8LSoGOXN6Zv4lRf/EIoZ80biDh9HOI+RNQ==}
-    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
-    dev: true
-
   /@eslint/js@8.51.0:
     resolution: {integrity: sha512-HxjQ8Qn+4SI3/AFv6sOrDB+g6PpUTDwSJiQqOrnneEk8L71161srI9gjzzZvYVbzHiVg/BvcH95+cK/zfIt4pg==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
 
-  /@hazmi35/eslint-config@9.0.0(@eslint/js@8.50.0)(@typescript-eslint/eslint-plugin@5.62.0)(@typescript-eslint/parser@5.62.0)(eslint@8.51.0)(typescript@5.2.2):
+  /@hazmi35/eslint-config@9.0.0(@eslint/js@8.51.0)(@typescript-eslint/eslint-plugin@5.62.0)(@typescript-eslint/parser@5.62.0)(eslint@8.51.0)(typescript@5.2.2):
     resolution: {integrity: sha512-byI1+bjlNxs+qvGiKS6+qEwUzWeBUm+WpP9xNE6rYQd1KW8isCgJY8Qrg2B5QrkCPBYVs+TN4up/guZ7Rxtdyg==}
     peerDependencies:
       '@eslint/js': '>=8.36.0'
@@ -301,7 +296,7 @@ packages:
       typescript:
         optional: true
     dependencies:
-      '@eslint/js': 8.50.0
+      '@eslint/js': 8.51.0
       '@typescript-eslint/eslint-plugin': 5.62.0(@typescript-eslint/parser@5.62.0)(eslint@8.51.0)(typescript@5.2.2)
       '@typescript-eslint/parser': 5.62.0(eslint@8.51.0)(typescript@5.2.2)
       eslint: 8.51.0
@@ -513,8 +508,8 @@ packages:
     resolution: {integrity: sha512-wOuvG1SN4Us4rez+tylwwwCV1psiNVOkJeM3AUWUNWg/jDQY2+HE/444y5gc+jBmRqASOm2Oeh5c1axHobwRKQ==}
     dev: true
 
-  /@types/node@18.18.3:
-    resolution: {integrity: sha512-0OVfGupTl3NBFr8+iXpfZ8NR7jfFO+P1Q+IO/q0wbo02wYkP5gy36phojeYWpLQ6WAMjl+VfmqUk2YbUfp0irA==}
+  /@types/node@18.18.4:
+    resolution: {integrity: sha512-t3rNFBgJRugIhackit2mVcLfF6IRc0JE4oeizPQL8Zrm8n2WY/0wOdpOPhdtG0V9Q2TlW/axbF1MJ6z+Yj/kKQ==}
     dev: true
 
   /@types/semver@7.3.13:
