@@ -6,5 +6,13 @@ on:
 
 jobs:
   publish:
+    strategy:
+      matrix:
+        include:
+          - registry-url: https://registry.npmjs.org/
+            token_secret_key: NPM_TOKEN
     uses: Hazmi35/workflows/.github/workflows/pnpm-publish-typescript.yml@master
-    secrets: inherit
+    with:
+      registry-url: ${{ matrix.registry-url }}
+    secrets:
+      NODE_AUTH_TOKEN: ${{ secrets[matrix.token_secret_key] }}
