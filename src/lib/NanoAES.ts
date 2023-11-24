@@ -7,7 +7,7 @@ export interface INanoAESCipherOpt {
     mode: "cbc" | "ctr" | "gcm";
     keySize: 128 | 192 | 256;
 }
-export type AuthenticatedCipher = CipherCCM | CipherCCM;
+export type AuthenticatedCipher = CipherCCM | CipherGCM;
 export type AuthenticatedDecipher = DecipherCCM | DecipherGCM;
 
 export class NanoAES {
