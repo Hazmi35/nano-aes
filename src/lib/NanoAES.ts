@@ -34,28 +34,38 @@ export class NanoAES {
     public encrypt(data: Buffer | string): Buffer {
         if (!Buffer.isBuffer(data) && typeof data !== "string") throw new Error("Input must be a Buffer or string");
 
-        const IV = randomBytes(16);
-        const cipher = createCipheriv(this.algorithm, Buffer.from(this.key), IV);
+        try {
+            const IV = randomBytes(16);
+            const cipher = createCipheriv(this.algorithm, Buffer.from(this.key), IV);
 
-        const encrypted = Buffer.concat([cipher.update(Buffer.from(data)), cipher.final()]);
-        const buffers = [encrypted, IV];
-        if (this.isAuthenticated()) buffers.push((cipher as CipherCCM | CipherGCM).getAuthTag());
+            const encrypted = Buffer.concat([cipher.update(Buffer.from(data)), cipher.final()]);
+            const buffers = [encrypted, IV];
+            if (this.isAuthenticated()) buffers.push((cipher as CipherCCM | CipherGCM).getAuthTag());
 
-        return combine(buffers, ";;");
+            return combine(buffers, ";;");
+        } catch (e) {
+            throw new Error(`Encryption failed: ${(e as Error).message}`);
+        }
     }
 
     public decrypt(encryptedData: Buffer): Buffer {
         if (!Buffer.isBuffer(encryptedData)) throw new Error("Input must be a Buffer");
 
-        const [cipherText, IV, authTag] = split(encryptedData, ";;");
-        const decipher = createDecipheriv(this.algorithm, Buffer.from(this.key), IV);
+        try {
+            const [cipherText, IV, authTag] = split(encryptedData, ";;");
+            if (!cipherText || !IV) throw new Error("Invalid encrypted data!");
 
-        if (this.isAuthenticated()) {
-            if (!authTag) throw new Error("No auth tag found, but mode is an authenticated mode!");
-            (decipher as AuthenticatedDecipher).setAuthTag(authTag);
+            const decipher = createDecipheriv(this.algorithm, Buffer.from(this.key), IV);
+
+            if (this.isAuthenticated()) {
+                if (!authTag) throw new Error("No auth tag found, but mode is an authenticated mode!");
+                (decipher as AuthenticatedDecipher).setAuthTag(authTag);
+            }
+
+            return Buffer.concat([decipher.update(cipherText), decipher.final()]);
+        } catch (e) {
+            throw new Error(`Decryption failed: ${(e as Error).message}`);
         }
-
-        return Buffer.concat([decipher.update(cipherText), decipher.final()]);
     }
 
     private isAuthenticated(): boolean {
