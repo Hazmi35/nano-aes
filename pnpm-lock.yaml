@@ -6,8 +6,8 @@ settings:
 
 devDependencies:
   '@hazmi35/eslint-config':
-    specifier: ^11.0.0
-    version: 11.0.0(@eslint/js@8.56.0)(@typescript-eslint/eslint-plugin@6.19.1)(@typescript-eslint/parser@6.19.1)(eslint@8.56.0)(typescript@5.3.3)
+    specifier: ^12.0.0
+    version: 12.0.0(@eslint/js@8.56.0)(@typescript-eslint/eslint-plugin@6.19.1)(@typescript-eslint/parser@6.19.1)(eslint@8.56.0)(typescript@5.3.3)
   '@swc/core':
     specifier: ^1.3.106
     version: 1.3.106
@@ -275,14 +275,14 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
 
-  /@hazmi35/eslint-config@11.0.0(@eslint/js@8.56.0)(@typescript-eslint/eslint-plugin@6.19.1)(@typescript-eslint/parser@6.19.1)(eslint@8.56.0)(typescript@5.3.3):
-    resolution: {integrity: sha512-haZj5Y227wWPupoPZmo28LupYeCfGhT4bmcw0a4xV3T1BpxjlgkAgMBCj5r//GNt/SeGV0O7nWvJfWCM4Ffuxw==}
+  /@hazmi35/eslint-config@12.0.0(@eslint/js@8.56.0)(@typescript-eslint/eslint-plugin@6.19.1)(@typescript-eslint/parser@6.19.1)(eslint@8.56.0)(typescript@5.3.3):
+    resolution: {integrity: sha512-kuGtfHkgIeglt6hSvcjsx/oGbBXh6DQJv5NgXusYnHjFI6o6zgktldu+7Dq1e+Jq7Ui13ATlA8AT2bGKQtWEsw==}
     peerDependencies:
-      '@eslint/js': '>=8.42.0'
-      '@typescript-eslint/eslint-plugin': '>=6.3.0'
-      '@typescript-eslint/parser': '>=6.3.0'
-      eslint: '>=8.46.0'
-      typescript: '>=4.3.5 <5.2.0'
+      '@eslint/js': '>=8.56.0'
+      '@typescript-eslint/eslint-plugin': '>=6.18.1'
+      '@typescript-eslint/parser': '>=6.18.1'
+      eslint: '>=8.56.0'
+      typescript: '>=4.3.5 <5.4.0'
     peerDependenciesMeta:
       '@typescript-eslint/eslint-plugin':
         optional: true
