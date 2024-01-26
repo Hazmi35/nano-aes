@@ -1,0 +1,4 @@
+{
+    "files.eol": "\n",
+    "eslint.experimental.useFlatConfig": true // https://github.com/microsoft/vscode-eslint/issues/1644
+}

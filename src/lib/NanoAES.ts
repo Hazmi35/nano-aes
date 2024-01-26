@@ -1,12 +1,13 @@
-/* eslint-disable @typescript-eslint/no-unnecessary-condition */
-import { CipherCCM, CipherGCM, createCipheriv, createDecipheriv, DecipherCCM, DecipherGCM, randomBytes } from "node:crypto";
+import { Buffer } from "node:buffer";
+import type { CipherCCM, CipherGCM, DecipherCCM, DecipherGCM } from "node:crypto";
+import { createCipheriv, createDecipheriv, randomBytes } from "node:crypto";
 import { combine, split } from "../util/BufferUtil.js";
 
 const modes = ["cbc", "ctr", "gcm"];
-export interface INanoAESCipherOpt {
+export type INanoAESCipherOpt = {
     mode: "cbc" | "ctr" | "gcm";
     keySize: 128 | 192 | 256;
-}
+};
 export type AuthenticatedCipher = CipherCCM | CipherGCM;
 export type AuthenticatedDecipher = DecipherCCM | DecipherGCM;
 
@@ -43,8 +44,8 @@ export class NanoAES {
             if (this.isAuthenticated()) buffers.push((cipher as CipherCCM | CipherGCM).getAuthTag());
 
             return combine(buffers, ";;");
-        } catch (e) {
-            throw new Error(`Encryption failed: ${(e as Error).message}`);
+        } catch (error) {
+            throw new Error(`Encryption failed: ${(error as Error).message}`);
         }
     }
 
@@ -63,8 +64,8 @@ export class NanoAES {
             }
 
             return Buffer.concat([decipher.update(cipherText), decipher.final()]);
-        } catch (e) {
-            throw new Error(`Decryption failed: ${(e as Error).message}`);
+        } catch (error) {
+            throw new Error(`Decryption failed: ${(error as Error).message}`);
         }
     }
 
