@@ -41,7 +41,30 @@ export type AuthenticatedDecipher = DecipherCCM | DecipherGCM;
 export class NanoAES {
     private readonly key!: KeyObject;
     private readonly algorithm!: string;
-    public constructor(public opt: NanoAESChiperOptions) {
+    public constructor(public opt?: NanoAESChiperOptions) {
+        if (opt?.key === undefined) throw new TypeError("Key is required!");
+        if (opt.mode === undefined) opt.mode = "cbc";
+
+        switch (typeof opt.key) {
+            case "string":
+                this.key = createSecretKey(opt.key, "utf8");
+                break;
+            case "object":
+                this.key = Buffer.isBuffer(opt.key) ? createSecretKey(opt.key) : opt.key;
+                break;
+            default:
+                throw new TypeError("Key must be a string or a KeyObject!");
+        }
+
+        if (opt.keySize === undefined) this.opt!.keySize = this.key.symmetricKeySize! * 8 as NanoAESChiperOptions["keySize"];
+
+        if (!modes.includes(this.opt!.mode!)) throw new TypeError(`Supported Modes are only ${modes.join(", ")}`);
+
+        // @ts-expect-error - keySizes is a readonly array
+        if (!keySizes.includes(this.opt?.keySize)) throw new TypeError(`Supported key sizes are only ${keySizes.join(", ")}`);
+
+        this.algorithm = ["aes", this.opt!.keySize, this.opt!.mode!.toLowerCase()].join("-");
+
         Object.defineProperties(this, {
             algorithm: {
                 enumerable: false,
@@ -59,28 +82,6 @@ export class NanoAES {
                 writable: false
             }
         });
-
-        if (opt.key === undefined) throw new TypeError("Key is required!");
-        if (opt.mode === undefined) opt.mode = "cbc";
-
-        switch (typeof opt.key) {
-            case "string":
-                this.key = createSecretKey(Buffer.from(opt.key));
-                break;
-            case "object":
-                this.key = Buffer.isBuffer(opt.key) ? createSecretKey(opt.key) : opt.key;
-                break;
-            default:
-                throw new TypeError("Key must be a string or a KeyObject!");
-        }
-
-        if (opt.keySize === undefined) this.opt.keySize = this.key.symmetricKeySize! * 8 as NanoAESChiperOptions["keySize"];
-
-        if (!modes.includes(this.opt.mode!)) throw new Error(`Supported Modes are only ${modes.join(", ")}`);
-
-        if (!keySizes.includes(this.opt.keySize!)) throw new Error(`Supported key sizes are only ${keySizes.join(", ")}`);
-
-        this.algorithm = ["aes", this.opt.keySize, this.opt.mode!.toLowerCase()].join("-");
     }
 
     /**
@@ -140,7 +141,7 @@ export class NanoAES {
     }
 
     private isAuthenticated(): boolean {
-        return this.opt.mode === "gcm";
+        return this.opt!.mode === "gcm";
     }
 
     /**
@@ -149,7 +150,9 @@ export class NanoAES {
      * @param size - The size of the key to generate.
      * @returns The generated key.
      */
-    public static generateKey(size: NanoAESChiperOptions["keySize"]): KeyObject {
+    public static generateKey(size: NanoAESChiperOptions["keySize"] = 192): KeyObject {
+        if (!keySizes.includes(size)) throw new TypeError(`Supported key sizes are only ${keySizes.join(", ")}`);
+
         return createSecretKey(randomBytes(Number(size) / 8));
     }
 }
