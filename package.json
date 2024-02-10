@@ -46,7 +46,7 @@
     "@tsconfig/node-lts": "^20.1.1",
     "@types/node": "^20.11.17",
     "terser": "^5.27.0",
-    "tsup": "^8.0.1",
+    "tsup": "^8.0.2",
     "typescript": "^5.3.3"
   },
   "engines": {
