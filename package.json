@@ -42,10 +42,10 @@
   },
   "devDependencies": {
     "@hazmi35/eslint-config": "^13.3.1",
-    "@swc/core": "^1.4.4",
+    "@swc/core": "^1.4.5",
     "@tsconfig/node-lts": "^20.1.1",
     "@types/node": "^20.11.24",
-    "terser": "^5.28.1",
+    "terser": "^5.29.1",
     "tsup": "^8.0.2",
     "typescript": "^5.3.3"
   },
