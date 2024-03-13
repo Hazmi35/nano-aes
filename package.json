@@ -42,7 +42,7 @@
   },
   "devDependencies": {
     "@hazmi35/eslint-config": "^13.3.1",
-    "@swc/core": "^1.4.6",
+    "@swc/core": "^1.4.7",
     "@tsconfig/node-lts": "^20.1.1",
     "@types/node": "^20.11.26",
     "terser": "^5.29.1",
