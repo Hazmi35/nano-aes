@@ -47,7 +47,7 @@
     "@types/node": "^20.11.30",
     "terser": "^5.29.2",
     "tsup": "^8.0.2",
-    "typescript": "^5.4.2"
+    "typescript": "^5.4.3"
   },
   "engines": {
     "node": ">=14.x"
