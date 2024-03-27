@@ -45,7 +45,7 @@
     "@swc/core": "^1.4.11",
     "@tsconfig/node-lts": "^20.1.3",
     "@types/node": "^20.11.30",
-    "terser": "^5.29.2",
+    "terser": "^5.30.0",
     "tsup": "^8.0.2",
     "typescript": "^5.4.3"
   },
