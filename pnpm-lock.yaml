@@ -12,8 +12,8 @@ devDependencies:
     specifier: ^1.4.11
     version: 1.4.11
   '@tsconfig/node-lts':
-    specifier: ^20.1.2
-    version: 20.1.2
+    specifier: ^20.1.3
+    version: 20.1.3
   '@types/node':
     specifier: ^20.11.30
     version: 20.11.30
@@ -730,8 +730,8 @@ packages:
     resolution: {integrity: sha512-myfUej5naTBWnqOCc/MdVOLVjXUXtIA+NpDrDBKJtLLg2shUjBu3cZmB/85RyitKc55+lUUyl7oRfLOvkr2hsw==}
     dev: true
 
-  /@tsconfig/node-lts@20.1.2:
-    resolution: {integrity: sha512-ac1p25SlBvxIG7WInTKMcIOpk+jzXcaOuhCiE4Ddq38RAvp0uWCugTedUHN4sobVTMbIKALbBI+ucGrQmPoeiA==}
+  /@tsconfig/node-lts@20.1.3:
+    resolution: {integrity: sha512-m3b7EP2U+h5tNSpaBMfcTuHmHn04wrgRPQQrfKt75YIPq6kPs2153/KfPHdqkEWGx5pEBvS6rnvToT+yTtC1iw==}
     dev: true
 
   /@types/json-schema@7.0.15:
