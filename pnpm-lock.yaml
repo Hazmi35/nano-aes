@@ -21,8 +21,8 @@ importers:
         specifier: ^20.12.7
         version: 20.12.7
       terser:
-        specifier: ^5.30.3
-        version: 5.30.3
+        specifier: ^5.30.4
+        version: 5.30.4
       tsup:
         specifier: ^8.0.2
         version: 8.0.2(@swc/core@1.4.16)(typescript@5.4.5)
@@ -1604,8 +1604,8 @@ packages:
     resolution: {integrity: sha512-GNzQvQTOIP6RyTfE2Qxb8ZVlNmw0n88vp1szwWRimP02mnTsx3Wtn5qRdqY9w2XduFNUgvOwhNnQsjwCp+kqaQ==}
     engines: {node: '>=6'}
 
-  terser@5.30.3:
-    resolution: {integrity: sha512-STdUgOUx8rLbMGO9IOwHLpCqolkDITFFQSMYYwKE1N2lY6MVSaeoi10z/EhWxRc6ybqoVmKSkhKYH/XUpl7vSA==}
+  terser@5.30.4:
+    resolution: {integrity: sha512-xRdd0v64a8mFK9bnsKVdoNP9GQIKUAaJPTaqEQDL4w/J8WaW4sWXXoMZ+6SimPkfT5bElreXf8m9HnmPc3E1BQ==}
     engines: {node: '>=10'}
     hasBin: true
 
@@ -3411,7 +3411,7 @@ snapshots:
 
   tapable@2.2.1: {}
 
-  terser@5.30.3:
+  terser@5.30.4:
     dependencies:
       '@jridgewell/source-map': 0.3.3
       acorn: 8.11.3
