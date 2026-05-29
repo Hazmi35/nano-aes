@@ -10,5 +10,5 @@ on:
 
 jobs:
   lint-compile:
-    uses: Hazmi35/workflows/.github/workflows/pnpm-eslint-typescript.yaml@master
+    uses: Hazmi35/workflows/.github/workflows/pnpm-eslint-typescript.yaml@902d2875b7564a44937b905f54a4002b3429ea56 # master
     secrets: inherit
