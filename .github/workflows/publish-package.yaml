@@ -11,7 +11,7 @@ jobs:
         include:
           - registry-url: https://registry.npmjs.org/
             token_secret_key: NPM_TOKEN
-    uses: Hazmi35/workflows/.github/workflows/pnpm-publish-typescript.yaml@master
+    uses: Hazmi35/workflows/.github/workflows/pnpm-publish-typescript.yaml@646ebf53969f65417daa2677643d4c7b4cbe9fa9 # master
     with:
       registry-url: ${{ matrix.registry-url }}
     secrets:
